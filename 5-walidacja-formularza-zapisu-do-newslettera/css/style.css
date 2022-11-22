@@ -1,15 +1,18 @@
 body {
     width: 100vw;
     height: 100vh;
-    background: #132c51;
+    /* background: #132c51; */
+    background: url(http://ipla-e2-22.pluscdn.pl/p/redb/ax/axytr9pfo1ova2yexpzegcw8puh5b57x.jpg);
     display: flex;
     align-items: center;
     justify-content: center;
+    backdrop-filter: blur(10px);
+
 }
 
 .container {
-    
-    background-color: #112849;
+    position: relative;
+    /* background-color: #112849; */
     color: white;
     min-width: 400px;
     max-width: 30%;
@@ -19,6 +22,17 @@ body {
     box-sizing: border-box;
     transition-duration: 1s;
     overflow: hidden;
+    /* backdrop-filter: blur(10px); */
+}
+
+.container::before {
+    left: 0;
+    top: 0;
+    position: absolute;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
 }
 
 .container:hover {
@@ -26,11 +40,12 @@ body {
 }
 
 .form {
+    /* po */
     text-align: left;
 }
 
 #errors {
-color: orangered;
+    color: orangered;
 }
 
 label,
